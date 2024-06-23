@@ -1,0 +1,205 @@
+
+
+
+**********IMPORTANT********
+
+*FOR USE ADMIN PANEL PLEASE LOGIN USING ➡️
+{
+*Email: admin@admin.com
+*password: 123456
+}
+
+
+**Environment Setup:**
+
+Utilizing ES6 modules with Node.js.
+Leveraging packages such as Express, dotenv for environment variables, Morgan for logging, and Mongoose for MongoDB interaction.
+CORS configured for cross-origin resource sharing.
+
+
+**Server Configuration:**
+
+Express initialized.
+Middleware setup:
+CORS enabled.
+JSON parsing.
+Morgan for logging HTTP requests in development mode.
+
+
+**Database Connection:**
+
+MongoDB connection established using Mongoose.
+Error handling implemented with try-catch block.
+
+
+**Routes:**
+Authentication, category, and product routes defined and mounted.
+
+REST API:
+Root route ("/") returns a welcome message.
+
+Port Configuration:
+The server listens on either the port specified in the environment variable PORT or defaults to port 8080.
+
+Server Start:
+Server started with app.listen() method.
+Console log confirms the server's startup, indicating the environment mode and the port it's running on.
+
+
+******ADMIN PANEL ******
+
+in this e-comm project, i have also created a admin panel.
+With the help of admin panel we can Create Category , Product , and also we can see Products Orders and
+we can manage orders status
+
+
+
+***********WHOLE PROJECT SUMMERY***********
+
+React Component Setup:
+Utilizing React functional components.
+Dependencies imported include useState, useEffect, useNavigate from React Router DOM, components from Ant Design (Checkbox, Radio), and custom components (Prices and Layout).
+
+State Management:
+State variables managed using useState, including cart, products, categories, checked (for category filtering), radio (for price filtering), total (total product count), page (current page number), and loading (loading state).
+
+API Integration:
+Axios used for making HTTP requests to the backend API.
+Functions like getAllCategory, getAllProducts, getTotal, loadMore, filterProduct fetch data from the backend API and update component state accordingly.
+API endpoints utilized for fetching categories, products, and filtered products.
+
+Effect Hooks:
+useEffect hook used for performing side effects like fetching initial data (getAllCategory, getTotal) and handling updates to state variables (page, checked, radio).
+Event Handling:
+Handlers like handleFilter for category filtering and onChange for handling radio button selection implemented to update state variables.
+
+UI Rendering:
+HTML structure and JSX used for rendering components and UI elements.
+Product cards dynamically rendered based on the fetched product data.
+Price formatting implemented using toLocaleString.
+Buttons for adding items to cart and navigating to product details page.
+
+Reset Functionality:
+Button implemented for resetting filters, triggering a page reload.
+
+Pagination:
+Load more button provided for fetching additional products.
+Pagination controlled by page state variable.
+
+Styling:
+Basic styling applied using CSS classes to structure the layout and style components.
+
+Toasts:
+react-hot-toast library utilized for displaying success messages when adding items to the cart.
+
+
+
+Register Controller:
+Validates incoming registration data for completeness.
+Checks if the user already exists in the database.
+Hashes the password and saves the user to the database.
+Returns appropriate responses based on the success or failure of the registration process.
+
+Login Controller:
+Validates incoming login credentials.
+Checks if the user exists in the database.
+Compares the password hashes to authenticate the user.
+Generates a JWT token upon successful authentication.
+Returns user information along with the token upon successful login.
+
+Forgot Password Controller:
+Validates incoming data for email, answer, and new password.
+Checks if the provided email and answer match any user in the database.
+Hashes the new password and updates the user's password in the database upon successful validation.
+
+Test Controller:
+A placeholder controller for testing protected routes.
+
+Update Profile Controller:
+Validates and updates user profile information such as name, email, password, address, and phone.
+Hashes the new password if provided.
+Returns the updated user profile upon successful update.
+
+Get Orders Controller:
+Retrieves orders associated with the authenticated user.
+Populates order details including products and buyer information.
+Returns the orders as JSON.
+
+Get All Orders Controller:
+Retrieves all orders in the system.
+Populates order details including products and buyer information.
+Returns the orders as JSON.
+
+Order Status Controller:
+Updates the status of a specific order identified by the orderId parameter.
+Updates the status field in the order document.
+Returns the updated order details.
+
+
+
+
+
+Create Product Controller:
+Validates incoming product data for completeness.
+Saves the product to the database after generating a slug for the product name.
+Handles file upload for the product photo if provided.
+Returns appropriate responses based on the success or failure of the product creation process.
+
+Get Product Controller:
+Retrieves all products from the database.
+Populates product category details.
+Limits the number of products to 12 and sorts them by creation date in descending order.
+Returns the products as JSON.
+
+Get Single Product Controller:
+Retrieves a single product from the database based on the slug parameter.
+Populates the product category details.
+Returns the product details as JSON.
+
+Product Photo Controller:
+Retrieves the photo of a product from the database based on the product ID parameter.
+Sets the content type header for the response.
+Returns the product photo data.
+
+Delete Product Controller:
+Deletes a product from the database based on the product ID parameter.
+Returns a success message upon successful deletion.
+
+Update Product Controller:
+Validates incoming product data for completeness.
+Updates the product in the database based on the product ID parameter.
+Handles file upload for the product photo if provided.
+Returns appropriate responses based on the success or failure of the product update process.
+
+Product Filters Controller:
+Retrieves products from the database based on category and price filters provided in the request body.
+Returns filtered products as JSON.
+
+Product Count Controller:
+Counts the total number of products in the database.
+Returns the total count as JSON.
+
+Product List Controller:
+Retrieves a list of products based on pagination.
+Returns products with pagination as JSON.
+
+Search Product Controller:
+Searches for products based on the keyword provided in the request parameters.
+Returns matching products as JSON.
+
+Related Product Controller:
+Retrieves related products based on the product ID and category ID provided in the request parameters.
+Limits the number of related products to 3.
+Returns related products as JSON.
+
+Product Category Controller:
+Retrieves products belonging to a specific category based on the category slug provided in the request parameters.
+Returns category details along with associated products as JSON.
+
+Braintree Token Controller:
+Generates a client token for Braintree integration.
+
+Braintree Payment Controller:
+Processes payments using Braintree.
+Calculates the total amount based on the items in the cart.
+Creates a new transaction and saves the order details in the database upon successful payments
