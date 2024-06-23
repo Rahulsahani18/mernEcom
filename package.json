@@ -31,5 +31,5 @@
     "react-icons": "^4.7.1",
     "slugify": "^1.6.5"
   },
-   "devDependencies": "@babel/plugin-proposal-private-property-in-object",
+  
 }
