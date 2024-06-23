@@ -24,6 +24,9 @@
     "slugify": "^1.6.6",
     "web-vitals": "^2.1.4"
   },
+  "devdependencies":{
+     "@babel/plugin-proposal-private-property-in-object"
+  }
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
